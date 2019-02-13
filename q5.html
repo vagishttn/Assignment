@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script>
+    </script>
+</head>
+
+<body>
+    <script>
+        function Employee(name, age, salary, dob) {
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+            this.dob = dob;
+        }
+
+        function groupBy(array, f) {
+            var groups = {};
+            array.forEach(function (o) {
+                var group = JSON.stringify(f(o));
+                groups[group] = groups[group] || [];
+                groups[group].push(o);
+            });
+            return Object.keys(groups).map(function (group) {
+                return groups[group];
+            });
+        }
+
+        var employee1 = new Employee("vagish", 24, 6000, "01/04/1994");
+        var employee2 = new Employee("prateek", 23, 3000, "02/04/1995");
+        var employee3 = new Employee("gagan", 22, 9000, "01/03/1993");
+        var employee4 = new Employee("sahil", 24, 800, "04/04/1992");
+        var employee5 = new Employee("rishabh", 21, 900, "01/05/1997");
+        var employee6 = new Employee("varun", 20, 7000, "06/04/1996");
+
+        var employeeList = [];
+        employeeList.push(employee1);
+        employeeList.push(employee2);
+        employeeList.push(employee3);
+        employeeList.push(employee4);
+        employeeList.push(employee5);
+        employeeList.push(employee6);
+
+        console.log(employeeList);
+
+        console.log("Employee with salary grater than 5000")
+        console.log(employeeList.filter(e => e.salary > 5000));
+        console.log("Employee with salary less than 1000 and age greater than 20 and give increment to salary")
+        console.log(employeeList.filter(e => e.salary < 1000 && e.age > 20).map(e => e.salary * 5))
+        console.log("Group employee on basis of age")
+        var ageGroups = groupBy(employeeList, function (item) {
+            return [item.age];
+        });
+
+        console.log(ageGroups)
+
+
+
+    </script>
+</body>
+
+</html>

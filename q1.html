@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script>
+
+        function calSI() {
+            var inputs = prompt("Enter Principle amount , Rate of Interest , Years (comma seprated");
+            var value = inputs.split(",");
+            var si = (value[0] * value[1] * value[2]) / 100;
+            console.log(si);
+
+            document.getElementById("simple").innerHTML = si;
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <p>Simple Interest Is -: <span id="simple"></span>
+    </p>
+    <script>calSI()</script>
+</body>
+
+</html>
+
+

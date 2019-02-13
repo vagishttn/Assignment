@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function areaOfCircle()
+            {
+                var input = prompt("Enter the radius of circle");
+                var area = 3.14*Math.pow(input,2);
+                document.getElementById("t1").innerHTML="The area of circle of radius "+input+ "  is ->  " +area +" cm<sup>2</sup>";
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <p id="t1"></p>
+        <script>areaOfCircle()</script>
+    </body>
+</html>

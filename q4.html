@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        function copy(mainObj) {
+            var obj = {};
+            for (key in mainObj) {
+                obj[key] = mainObj[key];
+            }
+            return obj;
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <p>Open Console</p>
+    <script>
+        var mainStudent = {
+            Fname:"Vagish",
+            Lname:"Dixit",
+            Age:24,
+        }
+        var copyStudent = copy(mainStudent);
+        console.log("Main Student Object");
+        console.log(mainStudent)
+        console.log("Copy of Student")
+        console.log(copyStudent)
+        console.log("Change in Age of Main Student")
+        mainStudent.Age=23;
+        console.log("Main Student " , mainStudent )
+        console.log("Copy Student " , copyStudent)
+    </script>
+</body>
+
+</html>
