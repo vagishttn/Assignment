@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+       table , tr, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Cell Value Greater than 10 color change</p>
+
+    <br>
+
+    <table>
+        <tr class="cell">
+            <td>20</td>
+            <td>5</td>
+            <td>1</td>
+            <td>3</td>
+            <td>10</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>50</td>
+            <td>10</td>
+            <td>3</td>
+            <td>11</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>5</td>
+            <td>19</td>
+            <td>30</td>
+            <td>10</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        $(function () {
+            $('tr td').each(function (e, value) {
+                if ($(value).text() > 10) $(value).css('color', 'red');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

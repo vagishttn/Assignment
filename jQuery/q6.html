@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>After page load change the HTML of div element with "p" element</p>
+    <div id="main">
+        
+    </div>
+    <script>
+
+        $(function () {
+
+           $('#main').replaceWith("<p>Hello World</p>")
+
+        });
+
+    </script>
+</body>
+
+</html>

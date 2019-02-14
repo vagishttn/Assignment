@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .dropdown-menu {
+            display: none
+        }
+
+        .dropdown>a {
+            padding: 12px;
+            width: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <p>Create a dropdown menu using hover method in jquery</p>
+
+    <div class="dropdown">
+        <a class="dropbtn">Dropdown</a>
+        <ul class="dropdown-menu">
+
+            <li><a href="#">Inbox</a></li>
+
+            <li><a href="#">Drafts</a></li>
+
+            <li><a href="#">Sent Items</a></li>
+
+            <li class="divider"></li>
+
+            <li><a href="#">Trash</a></li>
+
+        </ul>
+    </div>
+    <script>
+
+        $(function () {
+
+            $(".dropdown").hover(function () {
+                $('.dropdown-menu').slideDown('fast');
+            },
+                function () {
+                    $('.dropdown-menu').slideUp('fast');
+                });
+
+           
+
+        });
+
+    </script>
+</body>
+
+</html>

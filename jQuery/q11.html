@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        a {
+            padding: 12px;
+            width: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>On clicking on "google" tag. It is taking us to google home page. Stop it from happening</p>
+
+    <br>
+    <br>
+
+
+    <a href="www.google.com">Google</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a id="anchorTag" href="www.google.com">Click To Open Google</a>
+
+    <script>
+
+        $(function () {
+            $('#anchorTag').click(function (e) {
+                e.preventDefault();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

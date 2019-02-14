@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <button id="bclk">Click</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#bclk").click(function () {
+                var el = $("<button>Next Click</button>").attr("id", "bclk2");
+                $(this).after(el);
+            });
+        });
+    </script>
+</body>
+
+</html>

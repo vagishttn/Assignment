@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Click event not working on element which added dynamicly or via script, make it work using .on method</p>
+    <button >ADD Button</button>
+    <br>
+    <br>
+    <h2></h2>
+    <script>
+
+        $(function () {
+
+            var counter = 0;
+
+            $("button").click(function () {
+                $("h2").append("<button class='test'>Dynamic Button " + (++counter) + "</button><br><br>")
+            });
+
+            $("h2").on("click", "button.test", function () {
+                alert($(this).text());
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

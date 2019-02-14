@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li style="height:10px">Height First Li</li>
+        <li style="height:20px">Height Second Li</li>
+        <li style="height:30px">Height Third Li</li>
+    </ul>
+
+    <p>Height are</p>
+    <p class="mh"></p>
+    <script>
+        $(document).ready(function () {
+            var hi = 0;
+            $("li").each(function () {
+                var h = $(this).height();
+                if (h > hi) {
+                    hi = h;
+                }
+                var data = $(this).text() + " is " + hi + "  ,   "
+                $(".mh").append(data)
+            });
+        });
+    </script>
+</body>
+
+</html>

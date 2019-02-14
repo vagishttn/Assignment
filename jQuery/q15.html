@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p>Retrive the data from server using ajax get call</p>
+    <div class="table-responsive">
+        <table class="table-bordered">
+            <thead>
+                <th>User Id</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script>
+
+        $(function () {
+
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/posts",
+                method: "get",
+                success: function (result) {
+                    console.log(result.length)
+                    fillTable(result);
+                }
+            });
+
+
+        });
+
+        function fillTable(data) {
+            // console.log(data);
+            for (var i = 0; i < data.length; i++) {
+
+                var
+                    tr = $("<tr></tr>"),
+                    td1 = $("<td></td>"),
+                    td2 = $("<td></td>"),
+                    td3 = $("<td></td>"),
+                    td4 = $("<td></td>"),
+                    userId = $("<p></p>"),
+                    id = $("<p></p>"),
+                    title = $("<p></p>"),
+                    body = $("<p></p>");
+
+
+
+                id.append(data[i].id);
+                userId.append(data[i].userId);
+                title.append(data[i].title);
+                body.append(data[i].body);
+
+                td1.append(userId);
+                td2.append(id);
+                td3.append(title);
+                td4.append(body);
+
+
+
+                tr.append(td1).append(td2).append(td3).append(td4);
+
+                $('#tableBody').append(tr);
+
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Get dropdown selected value on onchanage event and append in div container</p>
+
+    <select id="selectOption">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Banglore">Banglore</option>
+        <option value="Pune">Pune</option>
+        <option value="Punjab">Punjab</option>
+
+    </select>
+
+    <br>
+    <br>
+
+    <p>The Select Value is : <span id="selectValue"></span></p>
+
+    <script>
+
+        $(function () {
+
+            $("#selectOption").on('change',function () {
+                var selectedCity = $(this).children("option:selected").val();
+                $("#selectValue").text(selectedCity);
+
+            });
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>
