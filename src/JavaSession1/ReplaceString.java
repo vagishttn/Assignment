@@ -1,4 +1,4 @@
-/*Question 1: Write a program to replace a substring inside a string with other string ?*/
+package JavaSession1;/*Question 1: Write a program to replace a substring inside a string with other string ?*/
 
 import java.util.Scanner;
 

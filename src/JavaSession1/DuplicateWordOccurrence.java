@@ -1,4 +1,4 @@
-/*Question 2: Write a program to find the number of occurrences of the duplicate words in a string and print them*/
+package JavaSession1;/*Question 2: Write a program to find the number of occurrences of the duplicate words in a string and print them*/
 
 import java.util.HashMap;
 import java.util.Map;

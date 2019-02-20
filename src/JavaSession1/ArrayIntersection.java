@@ -1,4 +1,4 @@
-/*Question 5: Find common elements between two arrays.*/
+package JavaSession1;/*Question 5: Find common elements between two arrays.*/
 
 import java.util.ArrayList;
 import java.util.Scanner;

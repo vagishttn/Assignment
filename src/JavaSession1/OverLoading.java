@@ -1,4 +1,4 @@
-/*Q10.Write a single program for following operation using overloading
+package JavaSession1;/*Q10.Write a single program for following operation using overloading
   A) Adding 2 integer number
   B) Adding 2 double
   C) multiplying 2 float

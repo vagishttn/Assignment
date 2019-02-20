@@ -1,4 +1,4 @@
-/*Question 9: Write a program to display values of enums using a constructor & getPrice() method (Example display house & their prices)*/
+package JavaSession1;/*Question 9: Write a program to display values of enums using a constructor & getPrice() method (Example display house & their prices)*/
 
 enum House {
 

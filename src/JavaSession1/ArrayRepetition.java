@@ -1,4 +1,4 @@
-/*Question 6: There is an array with every element repeated twice except one. Find that element*/
+package JavaSession1;/*Question 6: There is an array with every element repeated twice except one. Find that element*/
 
 
 import java.util.Arrays;

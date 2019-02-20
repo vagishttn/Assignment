@@ -1,4 +1,4 @@
-package Bank;
+package JavaSession1.Bank;
 
 public class Sbi extends Bank {
     public Sbi(float rateOfInterest, int customers, int branches) {

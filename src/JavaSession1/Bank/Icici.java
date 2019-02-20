@@ -1,4 +1,4 @@
-package Bank;
+package JavaSession1.Bank;
 
 public class Icici extends Bank {
 
